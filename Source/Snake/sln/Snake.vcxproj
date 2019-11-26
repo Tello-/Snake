@@ -19,29 +19,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameText.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MessageDatabase.cpp" />
-    <ClCompile Include="PlayingState.cpp" />
-    <ClCompile Include="Snake.cpp" />
-    <ClCompile Include="World.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameText.hpp" />
-    <ClInclude Include="MessageDatabase.h" />
-    <ClInclude Include="PlayingState.h" />
-    <ClInclude Include="Snake.hpp" />
-    <ClInclude Include="StateInterface.hpp" />
-    <ClInclude Include="World.hpp" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="highscore.txt" />
     <Text Include="testsnake.txt" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="NunitoSans-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Game.h" />
+    <ClInclude Include="..\include\GameText.hpp" />
+    <ClInclude Include="..\include\MessageDatabase.h" />
+    <ClInclude Include="..\include\PlayingState.h" />
+    <ClInclude Include="..\include\Snake.hpp" />
+    <ClInclude Include="..\include\StateInterface.hpp" />
+    <ClInclude Include="..\include\World.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\Game.cpp" />
+    <ClCompile Include="..\source\GameText.cpp" />
+    <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\source\MessageDatabase.cpp" />
+    <ClCompile Include="..\source\PlayingState.cpp" />
+    <ClCompile Include="..\source\Snake.cpp" />
+    <ClCompile Include="..\source\World.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
