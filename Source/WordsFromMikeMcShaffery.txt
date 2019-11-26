@@ -1,0 +1,4 @@
+The source code lives in the Source directory. It should be organized by the programmers
+in whatever manner they see fit. The project's solution file or makefile should also
+reside in the Source directory and be named according to the code word for the project.
+The rest of the source code should be organized into other directories below Source.
