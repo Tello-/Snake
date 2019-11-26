@@ -1,4 +1,4 @@
-#include "MessageDatabase.h"
+#include "..\include\MessageDatabase.h"
 
 void MessageDatabase::createMessage(MessageType _type, sf::Font& _fontRef, const std::string& _string, unsigned _size)
 {

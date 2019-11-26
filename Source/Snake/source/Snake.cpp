@@ -1,4 +1,4 @@
-#include "Snake.hpp"
+#include "..\include\Snake.hpp"
 
 Snake::Snake(int _blockSize, const sf::Vector2i& _pos) : m_size{_blockSize}
 {

@@ -1,4 +1,4 @@
-#include "World.hpp"
+#include "..\include\World.hpp"
 
 World::World(sf::Vector2u _windowSize) 
 	: m_windowSize{ _windowSize }, m_blockSize{ _windowSize.x / 25 }, m_snake{ getBlockSize(), sf::Vector2i{(int)m_windowSize.x / 2, (int)m_windowSize.y / 2} }

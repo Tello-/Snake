@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "..\include\Game.h"
 
 Game::Game() 
 	: m_window{ sf::VideoMode{WINDOW_X, WINDOW_Y}, "Snake" }, m_world{ sf::Vector2u{WINDOW_X, WINDOW_Y} }, 
