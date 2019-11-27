@@ -1,0 +1,9 @@
+# ignore build files
+
+Temp\
+Game\data\saves\
+
+
+# ignore .vs B.S.
+
+"*.vs"
