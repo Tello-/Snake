@@ -51,6 +51,8 @@ private:
 	sf::Text m_scoreText;
 	sf::Text m_highScoreText;
 
+	std::string m_highScoreFilePath;
+
 	sf::Text m_livesText;
 
 	sf::Text m_loseMsg;

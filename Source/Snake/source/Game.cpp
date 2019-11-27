@@ -3,7 +3,7 @@
 Game::Game() 
 	: m_window{ sf::VideoMode{WINDOW_X, WINDOW_Y}, "Snake" }, m_world{ sf::Vector2u{WINDOW_X, WINDOW_Y} }, 
 	 m_elapsed{0.f}, m_fps{60.f}, m_frameTime{ 1.f / m_world.getSnake()->GetSpeed() }, 
-	m_isHighScore{ false }, m_gameView{ sf::FloatRect{0.f, 0.f, WINDOW_X, WINDOW_Y} },
+	m_isHighScore{ false }, m_highScoreFilePath{ "../../../Game/data/saves/highscore.txt" }, m_gameView{ sf::FloatRect{0.f, 0.f, WINDOW_X, WINDOW_Y} },
 	m_state{State::PLAYING}
 {
 
@@ -11,7 +11,7 @@ Game::Game()
 	m_messageDatabase.createMessage(MessageType::SCORE, m_scoreFont, "Score: ");
 
 	// Load it from a file
-	if (!m_scoreFont.loadFromFile("NunitoSans-Bold.ttf"))
+	if (!m_scoreFont.loadFromFile("../../../Assets/Font/Nunito_Sans/NunitoSans-Bold.ttf"))
 	{
 		std::cerr << "Font failed to load..." << std::endl;
 	}
@@ -50,7 +50,7 @@ Game::Game()
 	m_messageDatabase.createMessage(MessageType::SCORE, m_scoreFont, "Score: ");
 
 
-	std::ifstream ifs{ "highscore.txt" };
+	std::ifstream ifs{ m_highScoreFilePath };
 	ifs >> m_highScore;
 	ifs.close();
 
@@ -62,7 +62,7 @@ Game::Game()
 Game::~Game()
 {
 	
-	std::ofstream ofs{ "highscore.txt" };
+	std::ofstream ofs{ m_highScoreFilePath };
 	ofs << m_highScore;
 	ofs.close();
 }
