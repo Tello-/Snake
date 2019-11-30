@@ -1,4 +1,5 @@
 #include "..\include\World.hpp"
+#include <iostream>
 
 World::World(sf::Vector2u _windowSize) 
 	: m_windowSize{ _windowSize }, m_blockSize{ _windowSize.x / 25 }, m_snake{ getBlockSize(), sf::Vector2i{(int)m_windowSize.x / 2, (int)m_windowSize.y / 2} }
@@ -7,14 +8,28 @@ World::World(sf::Vector2u _windowSize)
 	m_apple.setOutlineColor(sf::Color(31, 63, 54, 255));
 	m_apple.setOutlineThickness(-2);
 	m_apple.setRadius(static_cast<float>(m_blockSize) / 2.f);
+
+	m_pMTState = mtwist_new();
+	std::cout << m_pMTState << std::endl;
+	auto seed = mtwist_seed_from_system(m_pMTState);
+	std::cout << "Seed: " << seed << std::endl;
+	mtwist_init(m_pMTState, seed);
+
+	
+
 	//SpawnApple();
+}
+
+World::~World()
+{
+	mtwist_free(m_pMTState);
 }
 
 void World::SpawnApple()
 {
 	int maxX = (m_windowSize.x / m_blockSize) - 2;
 	int maxY = (m_windowSize.y / m_blockSize) - 2;
-	m_applePosition = sf::Vector2i(rand() % maxX + 1, rand() % maxY + 1);
+	m_applePosition = sf::Vector2i(mtwist_u32rand(m_pMTState) % maxX + 1, mtwist_u32rand(m_pMTState) % maxY + 1);
 	m_apple.setPosition(static_cast<float>(m_applePosition.x * m_blockSize), static_cast<float>(m_applePosition.y * m_blockSize));
 }
 
