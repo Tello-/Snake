@@ -1,7 +1,8 @@
 #pragma once
+#include <time.h>
+#include <mtwist.h>
 #include "SFML/Graphics.hpp"
 #include "Snake.hpp"
-
 
 
 class World
@@ -9,6 +10,7 @@ class World
 
 public:
 	World(sf::Vector2u _windowSize);
+	~World();
 
 	
 	void Update();
@@ -28,5 +30,6 @@ private:
 	sf::CircleShape m_apple;
 	sf::Vector2i m_applePosition;
 	Snake m_snake;
+	mtwist* m_pMTState;
 
 };

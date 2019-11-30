@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <SFML/Graphics.hpp>
 #include "World.hpp"
 #include "Snake.hpp"
 #include "GameText.hpp"
@@ -9,8 +10,6 @@
 
 const unsigned WINDOW_X{ 600 };
 const unsigned WINDOW_Y{ 600 };
-
-
 
 enum State {PENDING, PLAYING, PAUSED, LOSE};
 class Game
