@@ -2,6 +2,7 @@
 Snake clone made with SFML
 
 -- VS2017 x86 --
+Uses a public domain implementation of the Mersenne Twister Random Number Generation method to generate locations for fruit generation.
 
 Build and Run
 
