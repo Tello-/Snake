@@ -117,15 +117,15 @@ Project Link: [https://github.com/Tello-/Snake](https://github.com/Tello-/Snake)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/Tello-/Snake.svg?style=flat-square
 [contributors-url]: https://github.com/Tello-/Snake/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/Tello-/Snake.svg?style=flat-square
 [forks-url]: https://github.com/Tello-/Snake/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/Tello-/Snake.svg?style=flat-square
 [stars-url]: https://github.com/Tello-/Snake/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/Tello-/Snake.svg?style=flat-square
 [issues-url]: https://github.com/Tello-/Snake/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/Tello-/Snake.svg?style=flat-square
 [license-url]: https://github.com/Tello-/Snake/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/lollisjosh
