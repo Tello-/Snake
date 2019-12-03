@@ -26,6 +26,8 @@
     <Font Include="NunitoSans-Bold.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist.h" />
+    <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h" />
     <ClInclude Include="..\include\Game.h" />
     <ClInclude Include="..\include\GameText.hpp" />
     <ClInclude Include="..\include\MessageDatabase.h" />
@@ -35,6 +37,8 @@
     <ClInclude Include="..\include\World.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\3rdParty\MTwist\source\mt.c" />
+    <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c" />
     <ClCompile Include="..\source\Game.cpp" />
     <ClCompile Include="..\source\GameText.cpp" />
     <ClCompile Include="..\source\main.cpp" />
@@ -123,12 +127,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\3rdParty\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\3rdParty\MTwist\include;$(SolutionDir)..\..\3rdParty\SFML-2.5.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\..\3rdParty\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\3rdParty\MTwist\source;$(SolutionDir)..\..\3rdParty\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib	;sfml-window-d.lib	;sfml-audio-d.lib	;sfml-network-d.lib	;sfml-system-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -158,14 +162,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\3rdParty\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\3rdParty\MTwist\include;$(SolutionDir)..\..\3rdParty\SFML-2.5.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\..\3rdParty\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\3rdParty\MTwist\source;$(SolutionDir)..\..\3rdParty\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib	;sfml-window.lib	;sfml-audio.lib	;sfml-network.lib	;sfml-system.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
