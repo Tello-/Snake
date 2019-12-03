@@ -1,11 +1,22 @@
 # ignore build files
 
 Temp/
-Game/data/saves/
-Win32Debug/
-Win32Release/
 
 
 # ignore .vs B.S.
 
 "*.vs"
+
+#ignore intermediate files
+"*.ilk"
+"*.pdb"
+"*.obj"
+"*.tlog"
+"*.CppClean"
+"*.FileListAbsolute"
+"*.idb"
+"*.iobj"
+"*.ipdb"
+
+#ignore exe files
+"*.exe"
