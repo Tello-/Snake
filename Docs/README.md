@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Snaker][product-screenshot]]
+![Snaker][product-screenshot]
 
 Snaker is a clone of the classic game popularized by Nokia. Eat fruit to increase your score. However, as you eat your snake grows and avoiding your growing body becomes more difficult. Running into your own body will reduce your lives and leave a hazard in the play area. See how long your snake can grow.
 
