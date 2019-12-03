@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Snaker][product-screenshot]](https://example.com)
+![Snaker][product-screenshot]
 
 Snaker is a clone of the classic game popularized by Nokia. Eat fruit to increase your score. However, as you eat your snake grows and avoiding your growing body becomes more difficult. Running into your own body will reduce your lives and leave a hazard in the play area. See how long your snake can grow.
 
@@ -129,4 +129,4 @@ Project Link: [https://github.com/Tello-/Snake](https://github.com/Tello-/Snake)
 [license-url]: https://github.com/Tello-/Snake/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/lollisjosh
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://github.com/Tello-/Snake/blob/master/Docs/snaker.PNG
