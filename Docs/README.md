@@ -1,5 +1,3 @@
-# Snake
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -21,7 +19,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Tello-/Snake">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/Tello-/Snake/blob/master/Assets/snakerlogo.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Snaker</h3>
