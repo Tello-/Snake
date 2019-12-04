@@ -12,6 +12,7 @@ public:
 	FontPool() : m_bIsEmpty{ true } {}
 	void createFont(const std::string& _key, const std::string& _filePath);
 	bool removeFont(const std::string& _key);
+	const sf::Font& getFont(const std::string&) const;
 	bool findFont(const std::string& _targetFont) const;
 	const std::vector<std::string> fontKeyList() const;
 	

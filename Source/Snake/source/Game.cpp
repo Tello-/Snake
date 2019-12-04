@@ -9,13 +9,7 @@ Game::Game()
 
 	m_window.setKeyRepeatEnabled(false);
 
-	// Load it from a file
-	if (!m_scoreFont.loadFromFile("../../../Assets/Font/Nunito_Sans/NunitoSans-Bold.ttf"))
-	{
-		std::cerr << "Font failed to load..." << std::endl;
-	}
-	else
-	{
+	
 		m_scoreText.setFont(m_scoreFont);
 		m_scoreText.setCharacterSize(30);
 		m_scoreText.setFillColor(sf::Color::White);
@@ -43,7 +37,6 @@ Game::Game()
 
 		m_pauseMsg = m_loseMsg;
 		m_pauseMsg.setString("Paused...");
-	}
 
 
 	m_messageDatabase.createMessage(MessageType::SCORE, m_scoreFont, "Score: ");
@@ -254,6 +247,11 @@ void Game::InitMessageDatabase()
 
 	m_pauseMsg = m_loseMsg;
 	m_pauseMsg.setString("Paused...");
+}
+
+void Game::InitFontPool()
+{
+	m_fontPool.createFont(m_scoreFontKey, m_scoreFontFilePath);
 }
 
 bool Game::IsHighScore() const

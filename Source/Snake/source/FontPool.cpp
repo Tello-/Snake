@@ -28,6 +28,11 @@ bool FontPool::removeFont(const std::string& _key)
 	}
 }
 
+const sf::Font& FontPool::getFont(const std::string& _targetFont) const
+{
+	// TODO this doesnt seem like good construction. What if the font doesn't exist...
+}
+
 bool FontPool::findFont(const std::string& _targetFont) const
 {
 	auto it = m_fonts.find(_targetFont);
