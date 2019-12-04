@@ -27,6 +27,7 @@ private:
 
 	void DrawShadowText();
 
+	
 	void InitMessageDatabase();
 
 	bool IsHighScore() const;
