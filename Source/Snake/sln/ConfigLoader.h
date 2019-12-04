@@ -11,8 +11,9 @@ namespace Config
 	public:
 		File(Config::File::Type _fileType);
 		void loadFile(const std::string& _fp);
-		const std::string& contents() const { return m_fileString; }
+		inline const std::string& contents() const { return m_fileString; }
 		inline Config::Type fileType() const { return m_fileType; }
+		inline bool isLoaded() const { return m_isLoaded; }
 
 	private:
 		std::string m_fileString;

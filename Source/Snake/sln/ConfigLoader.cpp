@@ -7,6 +7,8 @@ Config::File::File (Config::Type _fileType)
 	: m_fileType{ _fileType }, m_fileString{ "" }, m_isLoaded{ false }
 {}
 
+/* Loads contents of given filepath into File object.
+	Note! Successive loads will overwrite prior contents*/
 void Config::File::loadFile(const std::string& _fp)
 {
 	assert(_fp != "");	
