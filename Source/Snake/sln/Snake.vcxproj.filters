@@ -52,6 +52,9 @@
     <ClInclude Include="..\include\FontPool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ConfigLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\Game.cpp">
@@ -79,6 +82,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\source\FontPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
