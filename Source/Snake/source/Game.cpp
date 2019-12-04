@@ -8,7 +8,6 @@ Game::Game()
 {
 
 	m_window.setKeyRepeatEnabled(false);
-	m_messageDatabase.createMessage(MessageType::SCORE, m_scoreFont, "Score: ");
 
 	// Load it from a file
 	if (!m_scoreFont.loadFromFile("../../../Assets/Font/Nunito_Sans/NunitoSans-Bold.ttf"))
