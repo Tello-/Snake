@@ -126,5 +126,5 @@ Project Link: [https://github.com/Tello-/Snake](https://github.com/Tello-/Snake)
 [license-shield]: https://img.shields.io/github/license/Tello-/Snake.svg?style=flat-square
 [license-url]: https://github.com/Tello-/Snake/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: www.linkedin.com/in/lollisjosh
+[linkedin-url]: https://linkedin.com/in/lollisjosh
 [product-screenshot]: https://github.com/Tello-/Snake/blob/master/Docs/snaker.PNG
