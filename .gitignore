@@ -5,18 +5,18 @@ Temp/
 
 # ignore .vs B.S.
 
-"*.vs"
+*.vs
 
 #ignore intermediate files
-"*.ilk"
-"*.pdb"
-"*.obj"
-"*.tlog"
-"*.CppClean"
-"*.FileListAbsolute"
-"*.idb"
-"*.iobj"
-"*.ipdb"
+*.ilk
+*.pdb
+*.obj
+*.tlog
+*.CppClean
+*.FileListAbsolute
+*.idb
+*.iobj
+*.ipdb
 
 #ignore exe files
-"*.exe"
+*.exe
