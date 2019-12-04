@@ -5,7 +5,7 @@ Temp/
 
 # ignore .vs B.S.
 
-*.vs
+.vs/
 
 #ignore intermediate files
 *.ilk
