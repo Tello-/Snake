@@ -1,12 +1,13 @@
 #include "ConfigLoader.h"
 #include <fstream>
 #include <iterator>
+#include <cassert>
 
-ConfigLoader::ConfigLoader()
-{
-}
+Config::File::File (Config::Type _fileType)
+	: m_fileType{ _fileType }, m_fileString{ "" }, m_isLoaded{ false }
+{}
 
-void ConfigLoader::loadFile(const std::string& _fp)
+void Config::File::loadFile(const std::string& _fp)
 {
 	assert(_fp != "");	
 	std::ifstream l_inFStream{ _fp };
@@ -14,5 +15,6 @@ void ConfigLoader::loadFile(const std::string& _fp)
 	assert(l_fileContents != "");
 
 	m_fileString = l_fileContents;
+	m_isLoaded = true;
 	l_inFStream.close();
 }
