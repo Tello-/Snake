@@ -10,25 +10,25 @@ Game::Game()
 	m_window.setKeyRepeatEnabled(false);
 
 	
-		m_scoreText.setFont(m_scoreFont);
+		m_scoreText.setFont(m_fontPool.getFont(m_scoreFontKey));
 		m_scoreText.setCharacterSize(30);
 		m_scoreText.setFillColor(sf::Color::White);
 		m_scoreText.setOutlineColor(sf::Color::Black);
 		m_scoreText.setPosition(sf::Vector2f{4.f, WINDOW_Y * .90f});
 
-		m_highScoreText.setFont(m_scoreFont);
+		m_highScoreText.setFont(m_fontPool.getFont(m_scoreFontKey));
 		m_highScoreText.setCharacterSize(30);
 		m_highScoreText.setFillColor(sf::Color::White);
 		m_highScoreText.setOutlineColor(sf::Color::Black);
 		m_highScoreText.setPosition(sf::Vector2f{ WINDOW_X * .40f, WINDOW_Y * .90f });
 
-		m_livesText.setFont(m_scoreFont);
+		m_livesText.setFont(m_fontPool.getFont(m_scoreFontKey));
 		m_livesText.setCharacterSize(24);
 		m_livesText.setFillColor(sf::Color::White);
 		m_livesText.setOutlineColor(sf::Color::Black);
 		m_livesText.setPosition(sf::Vector2f(WINDOW_X * .80f, WINDOW_Y * .01f));
 
-		m_loseMsg.setFont(m_scoreFont);
+		m_loseMsg.setFont(m_fontPool.getFont(m_scoreFontKey));
 		m_loseMsg.setCharacterSize(30);
 		m_loseMsg.setFillColor(sf::Color::Red);
 		m_loseMsg.setOutlineColor(sf::Color::Black);
@@ -61,6 +61,7 @@ Game::~Game()
 
 void Game::Run()
 {
+	InitFontPool();
 	while (m_window.isOpen())
 	{
 		Input();
