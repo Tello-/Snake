@@ -31,9 +31,7 @@
     <ClInclude Include="..\include\Game.h" />
     <ClInclude Include="..\include\GameText.hpp" />
     <ClInclude Include="..\include\MessageDatabase.h" />
-    <ClInclude Include="..\include\PlayingState.h" />
     <ClInclude Include="..\include\Snake.hpp" />
-    <ClInclude Include="..\include\StateInterface.hpp" />
     <ClInclude Include="..\include\World.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -43,7 +41,6 @@
     <ClCompile Include="..\source\GameText.cpp" />
     <ClCompile Include="..\source\main.cpp" />
     <ClCompile Include="..\source\MessageDatabase.cpp" />
-    <ClCompile Include="..\source\PlayingState.cpp" />
     <ClCompile Include="..\source\Snake.cpp" />
     <ClCompile Include="..\source\World.cpp" />
   </ItemGroup>
