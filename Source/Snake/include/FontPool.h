@@ -2,6 +2,7 @@
 #include <map>
 #include <string>
 #include <vector>
+#include <cassert> // for assert()
 #include <SFML/Graphics/Font.hpp>
 
 
