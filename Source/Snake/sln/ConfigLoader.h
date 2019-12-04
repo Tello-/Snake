@@ -2,22 +2,15 @@
 
 #include <string>
 
-namespace Config
+class File
 {
-	enum Type { FONT };
+public:
+	File();
+	void loadFile(const std::string& _fp);
+	inline const std::string& contents() const { return m_fileString; }
+	inline bool isLoaded() const { return m_isLoaded; }
 
-	class File
-	{
-	public:
-		File(Config::File::Type _fileType);
-		void loadFile(const std::string& _fp);
-		inline const std::string& contents() const { return m_fileString; }
-		inline Config::Type fileType() const { return m_fileType; }
-		inline bool isLoaded() const { return m_isLoaded; }
-
-	private:
-		std::string m_fileString;
-		Config::Type m_fileType;
-		bool m_isLoaded;
-	};
-}
+private:
+	std::string m_fileString;
+	bool m_isLoaded;
+};
