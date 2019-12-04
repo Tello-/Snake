@@ -49,6 +49,9 @@
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\FontPool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\Game.cpp">
@@ -73,6 +76,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\FontPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
