@@ -28,6 +28,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist.h" />
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h" />
+    <ClInclude Include="..\include\FileParser.h" />
     <ClInclude Include="..\include\FontPool.h" />
     <ClInclude Include="..\include\Game.h" />
     <ClInclude Include="..\include\GameText.hpp" />
@@ -39,6 +40,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\3rdParty\MTwist\source\mt.c" />
     <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c" />
+    <ClCompile Include="..\source\FileParser.cpp" />
     <ClCompile Include="..\source\FontPool.cpp" />
     <ClCompile Include="..\source\Game.cpp" />
     <ClCompile Include="..\source\GameText.cpp" />
