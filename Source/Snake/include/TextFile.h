@@ -3,10 +3,10 @@
 #include <string>
 
 /*Container for loading and storing text from a file*/
-class File
+class TextFile
 {
 public:
-	File();
+	TextFile();
 	void loadFile(const std::string& _fp);
 	inline const std::string& contents() const { return m_fileString; }
 	inline bool isLoaded() const { return m_isLoaded; }

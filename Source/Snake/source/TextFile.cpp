@@ -1,15 +1,15 @@
-#include "../include/ConfigLoader.h"
+#include "../include/TextFile.h"
 #include <fstream>
 #include <iterator>
 #include <cassert>
 
-File::File ()
+TextFile::TextFile ()
 	: m_fileString{ "" }, m_isLoaded{ false }
 {}
 
 /* Loads contents of given filepath into File object.
 	Note! Successive loads will overwrite prior contents*/
-void File::loadFile(const std::string& _fp)
+void TextFile::loadFile(const std::string& _fp)
 {
 	assert(_fp != "");	
 	std::ifstream l_inFStream{ _fp };

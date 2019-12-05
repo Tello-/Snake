@@ -6,7 +6,7 @@
 #include <SFML/Graphics/Font.hpp>
 
 
-
+/* Container for storage/access of all fonts used in the app*/
 class FontPool
 {
 public:

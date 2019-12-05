@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<font-pool>
-  <font>
-    <title>"Nunito-Sans-Bold"</title>
-    <key>"general-font"</key>
-    <filepath>"../../../Assets/Font/Nunito_Sans/NunitoSans-Bold.ttf"</filepath>
+<font_pool>
+  <font title="Nunito-Sans Bold">
+    <key>default_font</key>
+    <filepath>../../../Assets/Font/Nunito_Sans/NunitoSans-Bold.ttf</filepath>
   </font>
-</font-pool>
+</font_pool>
