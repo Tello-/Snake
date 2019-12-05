@@ -2,6 +2,7 @@
 
 #include <string>
 
+/*Container for loading and storing text from a file*/
 class File
 {
 public:

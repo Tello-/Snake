@@ -13,6 +13,10 @@ void File::loadFile(const std::string& _fp)
 {
 	assert(_fp != "");	
 	std::ifstream l_inFStream{ _fp };
+	if (!l_inFStream)
+	{
+		throw std::runtime_error("Failed to open file @: " + _fp);
+	}
 	std::string l_fileContents{ std::istreambuf_iterator<char>(l_inFStream), std::istreambuf_iterator<char>() };
 	assert(l_fileContents != "");
 
