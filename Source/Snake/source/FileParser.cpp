@@ -3,7 +3,6 @@
 #include <rapidxml_utils.hpp>
 #include <fstream>
 #include <exception>
-#include <iostream>
 #include <memory>
 
 
@@ -44,16 +43,12 @@ void Config::FileParser::Parse(const Config::AssetType & _assetType, const std::
 			newFile->type = _assetType;
 			_fileVec.push_back(newFile);
 		}
-
-
 	}
 	catch (std::runtime_error _exc)
 	{
 		l_inStream.close();
 		throw _exc;
 	}
-
-
 	
 	l_inStream.close();
 }

@@ -35,7 +35,6 @@
     <ClInclude Include="..\include\MessageDatabase.h" />
     <ClInclude Include="..\include\Snake.hpp" />
     <ClInclude Include="..\include\World.hpp" />
-    <ClInclude Include="..\include\TextFile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\3rdParty\MTwist\source\mt.c" />
@@ -48,7 +47,6 @@
     <ClCompile Include="..\source\MessageDatabase.cpp" />
     <ClCompile Include="..\source\Snake.cpp" />
     <ClCompile Include="..\source\World.cpp" />
-    <ClCompile Include="..\source\TextFile.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
