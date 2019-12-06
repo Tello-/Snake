@@ -1,3 +1,7 @@
+/* This is the file containing the header information for the FontPool Class.
+
+	The FontPool is the container that holds all of the games fonts or whatever collection of fonts you need.
+	Said fonts are accessable via a key/value relationship where the key is a string and the value is the sf::Font */
 #pragma once
 #include <map>
 #include <string>

@@ -11,8 +11,8 @@ class MessageDatabase
 {
 public:
 	   
-	void					createMessage		(MessageType, sf::Font&, const std::string&, unsigned = 24);
-	void					addMessage			(MessageType, sf::Text*);
+	void				createMessage		(MessageType, sf::Font&, const std::string&, unsigned = 24);
+	void				addMessage			(MessageType, sf::Text*);
 	sf::Text&			getMessage			(MessageType _type) { return *(m_messages.find(_type)->second); }
 
 
