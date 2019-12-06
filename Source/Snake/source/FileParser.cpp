@@ -1,6 +1,7 @@
 #include "../include/FileParser.h"
 #include <rapidxml.hpp>
 #include <rapidxml_utils.hpp>
+#include <rapidxml_iterators.hpp>
 #include <fstream>
 #include <exception>
 #include <iostream>
@@ -22,13 +23,18 @@ Config::ParsedFile* Config::FileParser::Parse(const Config::AssetType & _assetTy
 
 	try 
 	{
-		/*rapidxml throws if it fails to read the stream. */
+		/*rapidxml throws std::runtime_error if it fails to read the stream. */
 		/* using heap memory to avoid stack overflow warning */
 		std::unique_ptr<rapidxml::file<>> lp_xmlFile(new rapidxml::file<>(l_inStream));
 		/* l_doc will represent the head of the DOM tree holding the parsed xml info*/
-		rapidxml::xml_document<> l_doc;
+		std::unique_ptr	<rapidxml::xml_document<>> lp_doc(new rapidxml::xml_document<>);		
 		/* parsing and pointing the l_doc pointer to the DOM head */
-		l_doc.parse<0>(lp_xmlFile->data());
+		lp_doc->parse<0>(lp_xmlFile->data());
+
+		/* Now to assign the parsed sections to the corresponding config::ParsedFile members: */
+		assert(lp_doc->first_node); // assert that doc should have at least 1 node(font)
+		
+		rapidxml::node_iterator<> l_nodeIterator;
 
 
 	}
