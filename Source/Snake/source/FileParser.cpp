@@ -1,7 +1,6 @@
 #include "../include/FileParser.h"
 #include <rapidxml.hpp>
 #include <rapidxml_utils.hpp>
-#include <rapidxml_iterators.hpp>
 #include <fstream>
 #include <exception>
 #include <iostream>
@@ -15,8 +14,9 @@ Config::FileParser::FileParser()
 
 /*	@Param: _assetType : type tag to be assigned to this asset file
 	@Param: _filePath : string path to the file to be parsed
+	@Param: _fileVec : a mutable vector that the function will fill with any config files created
 	Warning: Throws std::runtime_error on bad filepath */
-Config::ParsedFile* Config::FileParser::Parse(const Config::AssetType & _assetType, const std::string & _filePath)
+void Config::FileParser::Parse(const Config::AssetType & _assetType, const std::string & _filePath, std::vector<Config::ParsedFile*>& _fileVec)
 {
 	/* Open provided file with ifstream */
 	std::ifstream l_inStream{ _filePath };
@@ -32,9 +32,18 @@ Config::ParsedFile* Config::FileParser::Parse(const Config::AssetType & _assetTy
 		lp_doc->parse<0>(lp_xmlFile->data());
 
 		/* Now to assign the parsed sections to the corresponding config::ParsedFile members: */
-		assert(lp_doc->first_node); // assert that doc should have at least 1 node(font)
+		//assert(lp_doc->first_node); // assert that doc should have at least 1 node(font)
 		
-		rapidxml::node_iterator<> l_nodeIterator;
+		// iterate through all fonts
+		for (auto nodeIter = lp_doc->first_node()->first_node(); nodeIter; nodeIter = nodeIter->next_sibling())
+		{
+			auto newFile = new ParsedFile;
+			newFile->name = nodeIter->first_attribute()->value;
+			newFile->key = nodeIter->first_node()->value();
+			newFile->filePath = nodeIter->first_node()->next_sibling()->value();
+			newFile->type = _assetType;
+			_fileVec.push_back(newFile);
+		}
 
 
 	}
@@ -47,6 +56,5 @@ Config::ParsedFile* Config::FileParser::Parse(const Config::AssetType & _assetTy
 
 	
 	l_inStream.close();
-	return nullptr;
 }
 

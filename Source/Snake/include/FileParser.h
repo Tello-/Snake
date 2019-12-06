@@ -9,6 +9,7 @@
 
 #pragma once
 #include <string>
+#include <vector>
 #include "TextFile.h"
 
 namespace Config
@@ -19,13 +20,13 @@ namespace Config
 		Config::AssetType type;
 		std::string name;
 		std::string key;
-		std::string value;
+		std::string filePath;
 	};
 	class FileParser
 	{
 	public:
 		FileParser();
-		static ParsedFile* Parse(const Config::AssetType& _assetType, const std::string & _filePath);
+		static void Parse(const Config::AssetType& _assetType, const std::string& _filePath, std::vector<Config::ParsedFile*>& _fileVec);
 	private:
 
 	};
