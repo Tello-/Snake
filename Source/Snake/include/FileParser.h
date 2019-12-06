@@ -25,7 +25,7 @@ namespace Config
 	{
 	public:
 		FileParser();
-		static ParsedFile* Parse(const Config::AssetType& _assetType, const TextFile& _textFile);
+		static ParsedFile* Parse(const Config::AssetType& _assetType, const std::string & _filePath);
 	private:
 
 	};
