@@ -13,11 +13,19 @@
 
 namespace Config
 {
-	
+	enum class AssetType {Font};
+	struct ParsedFile
+	{
+		Config::AssetType type;
+		std::string name;
+		std::string key;
+		std::string value;
+	};
 	class FileParser
 	{
 	public:
-		
+		FileParser();
+		static ParsedFile* Parse(const Config::AssetType& _assetType, const TextFile& _textFile);
 	private:
 
 	};
