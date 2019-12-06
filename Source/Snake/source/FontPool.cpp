@@ -5,9 +5,7 @@ void FontPool::createFont(const std::string& _key, const std::string& _filePath)
 	auto tempFontPointer = new sf::Font;
 	if (!tempFontPointer->loadFromFile("../../../Assets/Font/Nunito_Sans/NunitoSans-Bold.ttf"))
 	{
-		//std::cerr << "Font failed to load..." << std::endl;
-		/* TODO: Find out what is the best way to handle a case of a font not found.
-		Would this be exception-worthy?*/
+		throw std::runtime_error{ "Failed to load font at expected filepath : " + _filePath };
 	}
 	else
 	{
