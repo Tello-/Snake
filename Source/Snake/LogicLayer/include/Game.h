@@ -7,7 +7,7 @@
 #include "Snake.hpp"
 #include "GameText.hpp"
 #include "MessageDatabase.h"
-#include "ApplicationLayer/FontPool.h"
+#include "../../ApplicationLayer/include/FontPool.h"
 
 const unsigned WINDOW_X{ 600 };
 const unsigned WINDOW_Y{ 600 };

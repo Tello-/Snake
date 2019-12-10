@@ -28,63 +28,54 @@
     </Font>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\Game.h">
+    <ClInclude Include="..\ApplicationLayer\include\FileParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\GameText.hpp">
+    <ClInclude Include="..\ApplicationLayer\include\FontPool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\MessageDatabase.h">
+    <ClInclude Include="..\ApplicationLayer\include\InputController.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\Snake.hpp">
+    <ClInclude Include="..\LogicLayer\include\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\World.hpp">
+    <ClInclude Include="..\LogicLayer\include\GameText.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist.h">
+    <ClInclude Include="..\LogicLayer\include\MessageDatabase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h">
+    <ClInclude Include="..\LogicLayer\include\Snake.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\ApplicationLayer\FileParser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\ApplicationLayer\FontPool.h">
+    <ClInclude Include="..\LogicLayer\include\World.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\source\Game.cpp">
+    <ClCompile Include="..\ApplicationLayer\source\FileParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\GameText.cpp">
+    <ClCompile Include="..\ApplicationLayer\source\FontPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\main.cpp">
+    <ClCompile Include="..\ApplicationLayer\source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\MessageDatabase.cpp">
+    <ClCompile Include="..\LogicLayer\source\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\Snake.cpp">
+    <ClCompile Include="..\LogicLayer\source\GameText.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\World.cpp">
+    <ClCompile Include="..\LogicLayer\source\MessageDatabase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\3rdParty\MTwist\source\mt.c">
+    <ClCompile Include="..\LogicLayer\source\Snake.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\source\ApplicationLayer\FileParser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\source\ApplicationLayer\FontPool.cpp">
+    <ClCompile Include="..\LogicLayer\source\World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

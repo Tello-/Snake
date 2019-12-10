@@ -1,4 +1,4 @@
-#include "..\include\GameText.hpp"
+#include "..\..\LogicLayer\include\GameText.hpp"
 
 ScreenText::ScreenText(std::string _string, const sf::Font& _font) : m_string{_string}, m_pFont{&_font}
 {

@@ -1,14 +1,10 @@
-#include "../ApplicationLayer/FileParser.h"
+#include "../../ApplicationLayer/include/FileParser.h"
 #include <rapidxml.hpp>
 #include <rapidxml_utils.hpp>
 #include <fstream>
 #include <exception>
 #include <memory>
 
-
-
-Config::FileParser::FileParser()
-{}
 
 
 /*	@Param: _assetType : type tag to be assigned to this asset file
@@ -37,7 +33,7 @@ void Config::FileParser::Parse(const Config::AssetType & _assetType, const std::
 		for (auto nodeIter = lp_doc->first_node()->first_node(); nodeIter; nodeIter = nodeIter->next_sibling())
 		{
 			auto newFile = new ParsedFile;
-			newFile->name = nodeIter->first_attribute()->value;
+			newFile->name = nodeIter->first_attribute()->value();
 			newFile->key = nodeIter->first_node()->value();
 			newFile->filePath = nodeIter->first_node()->next_sibling()->value();
 			newFile->type = _assetType;
