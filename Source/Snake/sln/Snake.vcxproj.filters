@@ -49,10 +49,10 @@
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\FontPool.h">
+    <ClInclude Include="..\include\ApplicationLayer\FileParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\FileParser.h">
+    <ClInclude Include="..\include\ApplicationLayer\FontPool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -81,10 +81,10 @@
     <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\FontPool.cpp">
+    <ClCompile Include="..\source\ApplicationLayer\FileParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\FileParser.cpp">
+    <ClCompile Include="..\source\ApplicationLayer\FontPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
