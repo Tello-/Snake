@@ -9,7 +9,8 @@ void FontPool::createFont(const std::string& _key, const std::string& _filePath)
 	}
 	else
 	{
-		m_fonts.insert(std::pair<std::string, sf::Font*>{_filePath, tempFontPointer});
+		m_fonts.insert(std::pair<std::string, sf::Font*>{_key, tempFontPointer});
+		m_bIsEmpty = false;
 		tempFontPointer = nullptr;
 	}
 }

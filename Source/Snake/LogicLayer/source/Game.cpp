@@ -39,7 +39,7 @@ Game::Game()
 		m_pauseMsg.setString("Paused...");*/
 
 
-	m_messageDatabase.createMessage(MessageType::SCORE, m_scoreFont, "Score: ");
+	
 
 
 	std::ifstream ifs{ m_highScoreFilePath };
@@ -62,6 +62,7 @@ Game::~Game()
 void Game::Run()
 {
 	InitFontPool();
+	InitMessageDatabase();
 	while (m_window.isOpen())
 	{
 		Input();
@@ -220,7 +221,7 @@ void Game::DrawShadowText()
 
 void Game::InitMessageDatabase()
 {
-	m_messageDatabase.createMessage(MessageType::SCORE, m_scoreFont, "Score: ", 30);
+	m_messageDatabase.createMessage(MessageType::SCORE, m_fontPool->getFont("default_font"), "Score: ", 30);
 	//m_scoreText.setFont(m_scoreFont);
 	//m_scoreText.setCharacterSize(30);
 	//m_scoreText.setFillColor(sf::Color::White);
@@ -248,6 +249,8 @@ void Game::InitMessageDatabase()
 
 	m_pauseMsg = m_loseMsg;
 	m_pauseMsg.setString("Paused...");
+
+	m_messageDatabase.createMessage(MessageType::SCORE, m_fontPool->getFont("default_font"), "Score: ");
 }
 
 void Game::InitFontPool()

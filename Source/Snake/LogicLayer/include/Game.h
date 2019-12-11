@@ -32,7 +32,7 @@ private:
 	
 	void InitMessageDatabase();
 	void InitFontPool();
-	std::string m_fontConfigFilePath{ "../../../Assets/Font/fontconfig.xml" };
+	std::string m_fontConfigFilePath{ "../../../Assets/Config/fontconfig.xml" };
 
 	bool IsHighScore() const;
 	bool m_isHighScore;

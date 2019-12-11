@@ -1,8 +1,7 @@
 #include "..\include\MessageDatabase.h"
 
-void MessageDatabase::createMessage(MessageType _type, sf::Font& _fontRef, const std::string& _string, unsigned _size)
+void MessageDatabase::createMessage(MessageType _type, const sf::Font& _fontRef, const std::string& _string, unsigned _size)
 {
-
 	auto tempText = new sf::Text{_string,  _fontRef, _size };
 	tempText->setFillColor(sf::Color::White);
 	tempText->setOutlineColor(sf::Color::Black);
