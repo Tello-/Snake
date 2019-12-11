@@ -52,6 +52,15 @@
     <ClInclude Include="..\LogicLayer\include\World.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LogicLayer\include\FontLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\ApplicationLayer\source\FileParser.cpp">
@@ -76,6 +85,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\LogicLayer\source\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\MTwist\source\mt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LogicLayer\source\FontLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

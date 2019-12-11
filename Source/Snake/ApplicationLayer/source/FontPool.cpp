@@ -32,7 +32,6 @@ const sf::Font& FontPool::getFont(const std::string& _targetFont) const
 	auto found = m_fonts.find(_targetFont);
 	assert(found != m_fonts.end());
 	return *found->second;
-
 }
 
 bool FontPool::findFont(const std::string& _targetFont) const

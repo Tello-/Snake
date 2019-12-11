@@ -25,6 +25,8 @@ namespace Config
 	{
 	public:
 		FileParser() = delete;
+	private:
+		friend class FontLoader;
 		static void Parse(const Config::AssetType& _assetType, const std::string& _filePath, std::vector<Config::ParsedFile*>& _fileVec);
 	};
 
