@@ -4,31 +4,31 @@ Game::Game()
 	: m_window{ sf::VideoMode{WINDOW_X, WINDOW_Y}, "Snaker" }, m_world{ sf::Vector2u{WINDOW_X, WINDOW_Y} }, 
 	 m_elapsed{0.f}, m_fps{60.f}, m_frameTime{ 1.f / m_world.getSnake()->GetSpeed() }, 
 	m_isHighScore{ false }, m_highScoreFilePath{ "../../../Game/data/saves/highscore.txt" }, m_gameView{ sf::FloatRect{0.f, 0.f, WINDOW_X, WINDOW_Y} },
-	m_state{State::PLAYING}
+	m_state{State::PLAYING}, m_fontPool{nullptr}
 {
 
 	m_window.setKeyRepeatEnabled(false);
 
 	
-		m_scoreText.setFont(m_fontPool.getFont(m_scoreFontKey));
+		/*m_scoreText.setFont(m_fontPool->getFont("default_font"));
 		m_scoreText.setCharacterSize(30);
 		m_scoreText.setFillColor(sf::Color::White);
 		m_scoreText.setOutlineColor(sf::Color::Black);
 		m_scoreText.setPosition(sf::Vector2f{4.f, WINDOW_Y * .90f});
 
-		m_highScoreText.setFont(m_fontPool.getFont(m_scoreFontKey));
+		m_highScoreText.setFont(m_fontPool->getFont("default_font"));
 		m_highScoreText.setCharacterSize(30);
 		m_highScoreText.setFillColor(sf::Color::White);
 		m_highScoreText.setOutlineColor(sf::Color::Black);
 		m_highScoreText.setPosition(sf::Vector2f{ WINDOW_X * .40f, WINDOW_Y * .90f });
 
-		m_livesText.setFont(m_fontPool.getFont(m_scoreFontKey));
+		m_livesText.setFont(m_fontPool->getFont("default_font"));
 		m_livesText.setCharacterSize(24);
 		m_livesText.setFillColor(sf::Color::White);
 		m_livesText.setOutlineColor(sf::Color::Black);
 		m_livesText.setPosition(sf::Vector2f(WINDOW_X * .80f, WINDOW_Y * .01f));
 
-		m_loseMsg.setFont(m_fontPool.getFont(m_scoreFontKey));
+		m_loseMsg.setFont(m_fontPool->getFont("default_font"));
 		m_loseMsg.setCharacterSize(30);
 		m_loseMsg.setFillColor(sf::Color::Red);
 		m_loseMsg.setOutlineColor(sf::Color::Black);
@@ -36,7 +36,7 @@ Game::Game()
 		m_loseMsg.setString("You have lose...");
 
 		m_pauseMsg = m_loseMsg;
-		m_pauseMsg.setString("Paused...");
+		m_pauseMsg.setString("Paused...");*/
 
 
 	m_messageDatabase.createMessage(MessageType::SCORE, m_scoreFont, "Score: ");
@@ -252,7 +252,8 @@ void Game::InitMessageDatabase()
 
 void Game::InitFontPool()
 {
-	m_fontPool.createFont(m_scoreFontKey, m_scoreFontFilePath);
+	Config::FontLoader l_fontLoader;
+	m_fontPool = l_fontLoader.load(m_fontConfigFilePath);
 }
 
 bool Game::IsHighScore() const

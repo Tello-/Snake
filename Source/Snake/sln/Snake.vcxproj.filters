@@ -58,7 +58,7 @@
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\LogicLayer\include\FontLoader.h">
+    <ClInclude Include="..\ApplicationLayer\include\FontLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -93,7 +93,7 @@
     <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\LogicLayer\source\FontLoader.cpp">
+    <ClCompile Include="..\ApplicationLayer\source\FontLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

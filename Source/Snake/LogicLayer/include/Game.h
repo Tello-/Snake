@@ -8,6 +8,7 @@
 #include "GameText.hpp"
 #include "MessageDatabase.h"
 #include "../../ApplicationLayer/include/FontPool.h"
+#include "../../ApplicationLayer/include/FontLoader.h"
 
 const unsigned WINDOW_X{ 600 };
 const unsigned WINDOW_Y{ 600 };
@@ -31,8 +32,7 @@ private:
 	
 	void InitMessageDatabase();
 	void InitFontPool();
-	std::string m_scoreFontKey{ "score-font" };
-	std::string m_scoreFontFilePath{ "../../../Assets/Font/Nunito_Sans/NunitoSans-Bold.ttf" };
+	std::string m_fontConfigFilePath{ "../../../Assets/Font/fontconfig.xml" };
 
 	bool IsHighScore() const;
 	bool m_isHighScore;
@@ -51,7 +51,7 @@ private:
 
 	
 
-	FontPool m_fontPool;
+	FontPool* m_fontPool;
 	sf::Font m_scoreFont; // make this a std::shared_ptr
 	sf::Text m_scoreText;
 	sf::Text m_highScoreText;
