@@ -2,8 +2,6 @@
 the data to create/load fonts into the font pool*/
 #include "../../ApplicationLayer/include/FileParser.h"
 
-class FontPool;
-
 namespace Config
 {	
 	class FontLoader
