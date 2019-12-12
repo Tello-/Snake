@@ -11,7 +11,6 @@ class World
 public:
 	World(sf::Vector2u _windowSize);
 	~World();
-
 	
 	void Update();
 	void Render(sf::RenderWindow&);

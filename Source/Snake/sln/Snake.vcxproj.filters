@@ -46,6 +46,9 @@
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\ApplicationLayer\include\GameClock.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\ApplicationLayer\source\main.cpp">
@@ -64,6 +67,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ApplicationLayer\source\GameClock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

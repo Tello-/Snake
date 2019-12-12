@@ -30,6 +30,8 @@ private:
 	sf::RenderWindow m_window;
 	sf::View m_gameView;
 	sf::View m_loseView;
+
+	sf::View* mp_currentView;
 	
 	sf::Clock m_clock;
 	float m_elapsed;
