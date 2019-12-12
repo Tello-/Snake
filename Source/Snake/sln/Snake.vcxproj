@@ -28,26 +28,16 @@
   <ItemGroup>
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist.h" />
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h" />
-    <ClInclude Include="..\ApplicationLayer\include\FileParser.h" />
-    <ClInclude Include="..\ApplicationLayer\include\FontLoader.h" />
-    <ClInclude Include="..\ApplicationLayer\include\FontPool.h" />
     <ClInclude Include="..\ApplicationLayer\include\InputController.hpp" />
     <ClInclude Include="..\LogicLayer\include\Game.h" />
-    <ClInclude Include="..\LogicLayer\include\GameText.hpp" />
-    <ClInclude Include="..\LogicLayer\include\MessageDatabase.h" />
     <ClInclude Include="..\LogicLayer\include\Snake.hpp" />
     <ClInclude Include="..\LogicLayer\include\World.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\3rdParty\MTwist\source\mt.c" />
     <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c" />
-    <ClCompile Include="..\ApplicationLayer\source\FileParser.cpp" />
-    <ClCompile Include="..\ApplicationLayer\source\FontLoader.cpp" />
-    <ClCompile Include="..\ApplicationLayer\source\FontPool.cpp" />
     <ClCompile Include="..\ApplicationLayer\source\main.cpp" />
     <ClCompile Include="..\LogicLayer\source\Game.cpp" />
-    <ClCompile Include="..\LogicLayer\source\GameText.cpp" />
-    <ClCompile Include="..\LogicLayer\source\MessageDatabase.cpp" />
     <ClCompile Include="..\LogicLayer\source\Snake.cpp" />
     <ClCompile Include="..\LogicLayer\source\World.cpp" />
   </ItemGroup>

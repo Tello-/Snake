@@ -28,22 +28,10 @@
     </Font>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\ApplicationLayer\include\FileParser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ApplicationLayer\include\FontPool.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\ApplicationLayer\include\InputController.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\LogicLayer\include\Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\LogicLayer\include\GameText.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\LogicLayer\include\MessageDatabase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\LogicLayer\include\Snake.hpp">
@@ -58,27 +46,12 @@
     <ClInclude Include="..\..\3rdParty\MTwist\include\mtwist_internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\ApplicationLayer\include\FontLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\ApplicationLayer\source\FileParser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ApplicationLayer\source\FontPool.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\ApplicationLayer\source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\LogicLayer\source\Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\LogicLayer\source\GameText.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\LogicLayer\source\MessageDatabase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\LogicLayer\source\Snake.cpp">
@@ -91,9 +64,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\3rdParty\MTwist\source\seed.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ApplicationLayer\source\FontLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
