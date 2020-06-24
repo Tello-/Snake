@@ -17,7 +17,7 @@ struct SnakeSegment
 	SnakeSegment(const sf::Vector2i& _pos = sf::Vector2i{ 1, 1 })
 		: position{ _pos } {}
 	SnakeSegment(int _x, int _y) : position{ sf::Vector2i{_x, _y} } {}
-	sf::Vector2i position;
+	sf::Vector2i position; // integer (x,y) pair defining a grid coordinate position
 };
 
 using SnakeContainer = std::vector<SnakeSegment>;

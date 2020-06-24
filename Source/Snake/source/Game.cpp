@@ -6,7 +6,7 @@ Game::Game()
 	m_isHighScore{ false }, m_highScoreFilePath{ "../../../Game/data/saves/highscore.txt" }, m_gameView{ sf::FloatRect{0.f, 0.f, WINDOW_X, WINDOW_Y} },
 	m_state{State::PLAYING}
 {
-
+	//TODO: I Hate everything about this constructor. There is too much going on that is potential for headaches
 	m_window.setKeyRepeatEnabled(false);
 
 	// Load it from a file
@@ -153,6 +153,8 @@ void Game::Update()
 			m_scoreText.setFillColor(sf::Color::Yellow);
 		}
 
+
+		// TODO: this code "knows" too much. Figure out where else this code fits and/or how to break it down into simpler parts
 		m_scoreText.setString("Score: " + std::to_string(m_world.getSnake()->GetScore()));
 		m_highScoreText.setString("High Score: " + std::to_string(m_highScore));
 		m_livesText.setString("Lives: " + std::to_string(m_world.getSnake()->GetLives()));
@@ -181,8 +183,8 @@ void Game::Render()
 	case PENDING:
 		break;
 	case PLAYING:
-		m_world.Render(m_window);
-		DrawShadowText();
+		m_world.Render(m_window);  // TODO replace temporary render setup
+		DrawShadowText();			// TODO this is a terrible method
 		m_window.draw(m_scoreText);
 		m_window.draw(m_highScoreText);
 		m_window.draw(m_livesText);
@@ -224,7 +226,7 @@ void Game::DrawShadowText()
 	m_window.draw(shadowText);
 }
 
-void Game::InitMessageDatabase()
+void Game::InitMessageDatabase()  // TODO replace 
 {
 	m_messageDatabase.createMessage(MessageType::SCORE, m_scoreFont, "Score: ", 30);
 	//m_scoreText.setFont(m_scoreFont);
@@ -250,7 +252,7 @@ void Game::InitMessageDatabase()
 	m_loseMsg.setFillColor(sf::Color::Red);
 	m_loseMsg.setOutlineColor(sf::Color::Black);
 	m_loseMsg.setPosition(sf::Vector2f(WINDOW_X * .3f, WINDOW_Y * .5f));
-	m_loseMsg.setString("You have lose...");
+	m_loseMsg.setString("loser...");
 
 	m_pauseMsg = m_loseMsg;
 	m_pauseMsg.setString("Paused...");
