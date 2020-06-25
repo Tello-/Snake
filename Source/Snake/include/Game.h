@@ -23,11 +23,6 @@ private:
 	void Update();
 	void Render();
 
-	void CheckCollision();
-
-	void DrawShadowText();
-
-	void InitMessageDatabase();
 
 	bool IsHighScore() const;
 	bool m_isHighScore;
