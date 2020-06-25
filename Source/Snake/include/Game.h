@@ -5,8 +5,6 @@
 #include <SFML/Graphics.hpp>
 #include "World.hpp"
 #include "Snake.hpp"
-#include "GameText.hpp"
-#include "MessageDatabase.h"
 
 const unsigned WINDOW_X{ 600 };
 const unsigned WINDOW_Y{ 600 };
@@ -40,19 +38,8 @@ private:
 	float m_frameTime;
 
 	
-
-	sf::Font m_scoreFont; // make this a std::shared_ptr
-	sf::Text m_scoreText;
-	sf::Text m_highScoreText;
-
 	std::string m_highScoreFilePath;
 
-	sf::Text m_livesText;
-
-	sf::Text m_loseMsg;
-	sf::Text m_pauseMsg;
-
-	MessageDatabase m_messageDatabase;
 
 	int m_highScore;
 
