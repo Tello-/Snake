@@ -33,6 +33,7 @@
     <ClInclude Include="..\include\MessageDatabase.h" />
     <ClInclude Include="..\include\Snake.hpp" />
     <ClInclude Include="..\include\World.hpp" />
+    <ClInclude Include="HUD.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\3rdParty\MTwist\source\mt.c" />
