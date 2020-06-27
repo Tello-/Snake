@@ -80,4 +80,12 @@ sf::RenderWindow& Game::Window()
 	return m_window;
 }
 
+void Game::SignalClose()
+{
+	// TODO: Create proper game shut down sequence
+
+	// in the meantime
+	m_window.close();
+}
+
 

@@ -12,7 +12,8 @@ namespace SnakeState
 	class PendingState : public IState
 	{
 	public:
-		PendingState(IContext* context, sf::RenderWindow& window) : m_pWindow{ &window } { m_pContext = context; }
+		PendingState(IContext* context, sf::RenderWindow& window)
+			: m_pWindow{ &window }, m_bCloseFlag{ false }, m_pContext{ context } {}
 		virtual void handleInput()
 		{
 			// TODO: Set input flags for update to use to decide what to do/update...
@@ -20,12 +21,13 @@ namespace SnakeState
 			while (m_pWindow->pollEvent(event))
 			{
 				if (event.type == event.Closed)
-					m_pWindow->close();
+					m_bCloseFlag = true; // I don't think a specific state should be responsible for shutting the game down. I think it should pass that option back to the game class?
 			}
 		}
 		virtual void handleUpdate() 
 		{
 			// TODO: Check input flags set by handleInput()
+			if (m_bCloseFlag) { m_pContext->SignalClose(); } 
 		}
 		virtual void handleRender() 
 		{
@@ -34,7 +36,9 @@ namespace SnakeState
 		}
 
 	private:
+		IContext* m_pContext;
 		sf::RenderWindow* m_pWindow;
+		bool m_bCloseFlag;
 	};
 	//:::::::::::End Pending State:::::::::::::::::::::::::::
 
@@ -66,6 +70,8 @@ namespace SnakeState
 		}
 		virtual void handleUpdate() {}
 		virtual void handleRender() {}
+	private:
+		IContext* m_pContext;
 	};
 	//:::::::::::End Playing State:::::::::::::::::::::::::::
 
@@ -79,6 +85,9 @@ namespace SnakeState
 		virtual void handleInput() {}
 		virtual void handleUpdate() {}
 		virtual void handleRender() {}
+
+	private:
+		IContext* m_pContext;
 	};
 	//:::::::::::End Pause State:::::::::::::::::::::::::::
 
@@ -93,6 +102,9 @@ namespace SnakeState
 		virtual void handleInput() {}
 		virtual void handleUpdate() {}
 		virtual void handleRender() {}
+
+	private:
+		IContext* m_pContext;
 	};
 	//:::::::::::End Lose State:::::::::::::::::::::::::::
 

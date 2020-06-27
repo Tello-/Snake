@@ -13,8 +13,7 @@ public:
 	virtual void handleUpdate() = 0;
 	virtual void handleRender() = 0;
 
-
 protected:
-	IContext* m_pContext;
+	
 };
 

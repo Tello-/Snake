@@ -42,6 +42,8 @@ private: // Private Method
 
 	sf::RenderWindow&	Window();
 
+	void				SignalClose(); // TODO: Define;
+
 private: // Private Data
 	bool				m_isHighScore;
 	World			m_world;	
