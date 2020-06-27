@@ -13,7 +13,7 @@ namespace SnakeState
 		virtual void handleRender() {}
 	};
 
-	class PlayingState: public IState
+	class PlayingState : public IState
 	{
 	public:
 		PlayingState(IContext& context) : IState{ context } {}
@@ -22,7 +22,7 @@ namespace SnakeState
 		virtual void handleRender() {}
 	};
 
-	class PauseState: public IState
+	class PauseState : public IState
 	{
 	public:
 		PauseState(IContext& context) : IState{ context } {}
@@ -39,4 +39,4 @@ namespace SnakeState
 		virtual void handleUpdate() {}
 		virtual void handleRender() {}
 	};
-}
+};
