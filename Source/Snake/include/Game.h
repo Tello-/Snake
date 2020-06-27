@@ -3,16 +3,16 @@
 #include <fstream>
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "World.hpp"
+#include "IContext.hpp"
+#include "World.hpp" 
 #include "Snake.hpp"
-#include "GameText.hpp"
-#include "MessageDatabase.h"
+
 
 const unsigned WINDOW_X{ 600 };
 const unsigned WINDOW_Y{ 600 };
 
 enum State {PENDING, PLAYING, PAUSED, LOSE};
-class Game
+class Game : public IContext
 {
 public:
 	Game();
@@ -36,7 +36,6 @@ private:
 
 	std::string m_highScoreFilePath;
 
-	MessageDatabase m_messageDatabase;
 
 	int m_highScore;
 
