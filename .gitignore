@@ -17,6 +17,7 @@ Temp/
 "*.idb"
 "*.iobj"
 "*.ipdb"
+"*.opendb"
 
 #ignore exe files
 "*.exe"

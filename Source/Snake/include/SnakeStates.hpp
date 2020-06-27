@@ -15,6 +15,7 @@ namespace SnakeState
 		PendingState(IContext* context, sf::RenderWindow& window) : m_pWindow{ &window } { m_pContext = context; }
 		virtual void handleInput()
 		{
+			// TODO: Set input flags for update to use to decide what to do/update...
 			sf::Event event;
 			while (m_pWindow->pollEvent(event))
 			{
@@ -22,8 +23,15 @@ namespace SnakeState
 					m_pWindow->close();
 			}
 		}
-		virtual void handleUpdate() {}
-		virtual void handleRender() {}
+		virtual void handleUpdate() 
+		{
+			// TODO: Check input flags set by handleInput()
+		}
+		virtual void handleRender() 
+		{
+			// TODO: Draw Background
+			// TODO: Draw Splash Screen
+		}
 
 	private:
 		sf::RenderWindow* m_pWindow;
@@ -37,7 +45,25 @@ namespace SnakeState
 	{
 	public:
 		PlayingState(IContext& context) { m_pContext = &context; }
-		virtual void handleInput() {}
+		virtual void handleInput() 
+		{
+			/*This is the code that was the structure for the previous implementation
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
+			{				
+			}
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
+			{
+			}
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+			{
+			}
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+			{
+			}
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+			{
+			}*/
+		}
 		virtual void handleUpdate() {}
 		virtual void handleRender() {}
 	};
