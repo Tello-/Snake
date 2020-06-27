@@ -24,6 +24,13 @@ public:
 
 private: // Private Method
 
+	friend			SnakeState::PendingState;
+	friend			SnakeState::PlayingState;
+	friend			SnakeState::PauseState;
+	friend			SnakeState::LoseState;
+
+
+
 	void				resetGame();
 	void				initDefaultState();
 
@@ -33,7 +40,7 @@ private: // Private Method
 
 	bool				IsHighScore() const;
 
-
+	sf::RenderWindow&	Window();
 
 private: // Private Data
 	bool				m_isHighScore;

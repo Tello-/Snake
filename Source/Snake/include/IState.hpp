@@ -6,7 +6,7 @@ class IContext; // forward dec
 class IState
 {
 public:
-	IState(IContext& context) : m_pContext{ &context } {}
+	//IState(IContext* context) : m_pContext{ context } {}
 	virtual ~IState() {}
 
 	virtual void handleInput() = 0;

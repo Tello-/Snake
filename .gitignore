@@ -6,7 +6,7 @@ Temp/
 # ignore .vs B.S.
 
 "*.vs"
-
+"Source/Snake/sln/.vs/*"
 #ignore intermediate files
 "*.ilk"
 "*.pdb"
