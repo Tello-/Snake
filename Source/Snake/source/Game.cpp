@@ -51,7 +51,7 @@ void Game::initDefaultState()
 {
 	if (m_pCurrentState) delete m_pCurrentState;
 
-	m_pCurrentState = new SnakeState::PendingState{ this, m_window };
+	m_pCurrentState = new SnakeState::PendingState{ *this, m_window };
 }
 
 void Game::Input()

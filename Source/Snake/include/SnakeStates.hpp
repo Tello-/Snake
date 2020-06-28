@@ -1,7 +1,7 @@
 #pragma once
-#include <stack>
+
 #include "IState.hpp"
-#include "IContext.hpp"
+
 
 
 namespace SnakeState
@@ -12,8 +12,13 @@ namespace SnakeState
 	class PendingState : public IState
 	{
 	public:
-		PendingState(IContext* context, sf::RenderWindow& window)
-			: m_pWindow{ &window }, m_bCloseFlag{ false }, m_pContext{ context } {}
+		PendingState(Game& game, sf::RenderWindow& window)
+			: IState{ &game },
+			m_pWindow {&window}, 
+			m_bCloseFlag{ false } {}
+		
+		
+		
 		virtual void handleInput()
 		{
 			// TODO: Set input flags for update to use to decide what to do/update...
@@ -26,8 +31,7 @@ namespace SnakeState
 		}
 		virtual void handleUpdate() 
 		{
-			// TODO: Check input flags set by handleInput()
-			if (m_bCloseFlag) { m_pContext->SignalClose(); } 
+			 
 		}
 		virtual void handleRender() 
 		{
@@ -36,76 +40,76 @@ namespace SnakeState
 		}
 
 	private:
-		IContext* m_pContext;
+		//Game* m_pGame;
 		sf::RenderWindow* m_pWindow;
 		bool m_bCloseFlag;
 	};
 	//:::::::::::End Pending State:::::::::::::::::::::::::::
 
 
-	// ***************Playing State**************************
-	// The state active during normal game play
-	class PlayingState : public IState
-	{
-	public:
-		PlayingState(IContext& context) { m_pContext = &context; }
-		virtual void handleInput() 
-		{
-			/*This is the code that was the structure for the previous implementation
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
-			{				
-			}
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
-			{
-			}
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
-			{
-			}
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
-			{
-			}
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-			{
-			}*/
-		}
-		virtual void handleUpdate() {}
-		virtual void handleRender() {}
-	private:
-		IContext* m_pContext;
-	};
-	//:::::::::::End Playing State:::::::::::::::::::::::::::
-
-
-	// ***************Pause State**************************
-	// State game takes when paused
-	class PauseState : public IState
-	{
-	public:
-		PauseState(IContext& context) { m_pContext = &context; }
-		virtual void handleInput() {}
-		virtual void handleUpdate() {}
-		virtual void handleRender() {}
-
-	private:
-		IContext* m_pContext;
-	};
-	//:::::::::::End Pause State:::::::::::::::::::::::::::
-
-
-
-	// ***************Lose State**************************
-	// State that notifies the player of their loss and prints highscores or similar info
-	class LoseState : public IState
-	{
-	public:
-		LoseState(IContext& context) { m_pContext = &context; }
-		virtual void handleInput() {}
-		virtual void handleUpdate() {}
-		virtual void handleRender() {}
-
-	private:
-		IContext* m_pContext;
-	};
-	//:::::::::::End Lose State:::::::::::::::::::::::::::
-
+//	// ***************Playing State**************************
+//	// The state active during normal game play
+//	class PlayingState : public IState
+//	{
+//	public:
+//		PlayingState(Game& game) : IState{ game }
+//		virtual void handleInput() 
+//		{
+//			/*This is the code that was the structure for the previous implementation
+//			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
+//			{				
+//			}
+//			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
+//			{
+//			}
+//			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+//			{
+//			}
+//			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+//			{
+//			}
+//			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+//			{
+//			}*/
+//		}
+//		virtual void handleUpdate() {}
+//		virtual void handleRender() {}
+//	private:
+//		//Game* m_pGame;
+//	};
+//	//:::::::::::End Playing State:::::::::::::::::::::::::::
+//
+//
+//	// ***************Pause State**************************
+//	// State game takes when paused
+//	class PauseState : public IState
+//	{
+//	public:
+//		PauseState(Game& game) { m_pGame = &game; }
+//		virtual void handleInput() {}
+//		virtual void handleUpdate() {}
+//		virtual void handleRender() {}
+//
+//	private:
+//		//Game* m_pGame;
+//	};
+//	//:::::::::::End Pause State:::::::::::::::::::::::::::
+//
+//
+//
+//	// ***************Lose State**************************
+//	// State that notifies the player of their loss and prints highscores or similar info
+//	class LoseState : public IState
+//	{
+//	public:
+//		LoseState(Game& game) { m_pGame = &game; }
+//		virtual void handleInput() {}
+//		virtual void handleUpdate() {}
+//		virtual void handleRender() {}
+//
+//	private:
+//		//Game* m_pGame;
+//	};
+//	//:::::::::::End Lose State:::::::::::::::::::::::::::
+//
 };

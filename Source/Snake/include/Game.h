@@ -3,7 +3,6 @@
 #include <fstream>
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "IState.hpp"
 #include "SnakeStates.hpp"
 #include "World.hpp" 
 #include "Snake.hpp"
@@ -14,7 +13,7 @@ const unsigned			WINDOW_Y{ 600 };
 
 enum State			{PENDING, PLAYING, PAUSED, LOSE};
 
-class Game : public IContext
+class Game
 {
 public:
 					Game();
@@ -25,9 +24,9 @@ public:
 private: // Private Method
 
 	friend			SnakeState::PendingState;
-	friend			SnakeState::PlayingState;
-	friend			SnakeState::PauseState;
-	friend			SnakeState::LoseState;
+	//friend			SnakeState::PlayingState;
+	//friend			SnakeState::PauseState;
+	//friend			SnakeState::LoseState;
 
 
 

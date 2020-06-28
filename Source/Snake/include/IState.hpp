@@ -1,12 +1,11 @@
 #pragma once
 
 
-class IContext; // forward dec
-
+class Game;
 class IState
 {
 public:
-	//IState(IContext* context) : m_pContext{ context } {}
+	IState(Game* game) : m_pGame{ game } {}
 	virtual ~IState() {}
 
 	virtual void handleInput() = 0;
@@ -14,6 +13,6 @@ public:
 	virtual void handleRender() = 0;
 
 protected:
-	
+	Game* m_pGame;
 };
 
