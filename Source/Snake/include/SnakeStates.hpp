@@ -31,7 +31,7 @@ namespace SnakeState
 		}
 		virtual void handleUpdate() 
 		{
-			 
+			if (m_bCloseFlag) m_pWindow->close(); // TODO maybe change this so the state cant close the whole game
 		}
 		virtual void handleRender() 
 		{
