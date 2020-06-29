@@ -1,6 +1,7 @@
 #pragma once
 
 #include "IState.hpp"
+#include "Constants.hpp"
 
 
 
@@ -35,7 +36,8 @@ namespace SnakeState
 		}
 		virtual void handleRender() 
 		{
-			m_pWindow->clear(sf::Color::Green); // TODO replace when no longer needed: Temp color fill for pending state bg
+			// BG will be this color: #0F380Fh
+			m_pWindow->clear(Game_Constants::DARK_COLOR); // TODO replace when no longer needed: Temp color fill for pending state bg
 			m_pWindow->display();
 			// TODO: Draw Splash Screen
 		}

@@ -1,7 +1,7 @@
 #include "..\include\Game.h"
 
 Game::Game() 
-	: m_window{ sf::VideoMode{WINDOW_X, WINDOW_Y}, "Snaker" }, m_world{ sf::Vector2u{WINDOW_X, WINDOW_Y} }, 
+	: m_window{ sf::VideoMode{Game_Constants::WINDOW_X, Game_Constants::WINDOW_Y}, "Snaker" }, m_world{ sf::Vector2u{Game_Constants::WINDOW_X, Game_Constants::WINDOW_Y} },
 	 m_elapsed{0.f}, m_fps{60.f}, m_frameTime{ 1.f / m_world.getSnake()->GetSpeed() }, 
 	m_isHighScore{ false }, m_highScoreFilePath{ "../../../Game/data/saves/highscore.txt" }
 {
