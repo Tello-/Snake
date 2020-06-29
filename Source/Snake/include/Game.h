@@ -27,7 +27,7 @@ public:
 private: // Private Method
 
 	friend			SnakeState::PendingState;
-	//friend			SnakeState::PlayingState;
+	friend			SnakeState::PlayingState;
 	//friend			SnakeState::PauseState;
 	//friend			SnakeState::LoseState;
 
@@ -35,6 +35,7 @@ private: // Private Method
 
 	void				resetGame();
 	void				initDefaultState();
+	void				transitionToState(IState* state);
 
 	void				Input();
 	void				Update();
