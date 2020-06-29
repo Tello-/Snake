@@ -10,6 +10,10 @@ namespace SnakeState
 
 	// ***************Pending State**************************
 	// The initial state of the game. This is the state the game waits in for input to start.
+	// The pending state will be when the splash screen or title screen is displayed.
+	// The graphics include: logo, prompt for choice or "any key"
+	// Animated ai-controlled snake
+	// maybe music
 	class PendingState : public IState
 	{
 	public:
@@ -36,7 +40,6 @@ namespace SnakeState
 		}
 		virtual void handleRender() 
 		{
-			// BG will be this color: #0F380Fh
 			m_pWindow->clear(Game_Constants::DARK_COLOR); // TODO replace when no longer needed: Temp color fill for pending state bg
 			m_pWindow->display();
 			// TODO: Draw Splash Screen
