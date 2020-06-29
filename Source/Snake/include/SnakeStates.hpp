@@ -35,7 +35,8 @@ namespace SnakeState
 		}
 		virtual void handleRender() 
 		{
-			// TODO: Draw Background
+			m_pWindow->clear(sf::Color::Green); // TODO replace when no longer needed: Temp color fill for pending state bg
+			m_pWindow->display();
 			// TODO: Draw Splash Screen
 		}
 
